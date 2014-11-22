@@ -5,9 +5,11 @@ class NewVisitorTest(unittest.TestCase):
 	
     def setUp(self):
         self.browser = webdriver.Firefox()
+        self.browser.imlicitly_wait(3)
 
     def tearDown(self):
         self.browser.quit()
+        #pass
 
     def test_can_start_a_list_and_retrieve_it_later(self):
         #Edith has heard about a cool new online to-do app. She goes
